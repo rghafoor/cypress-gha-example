@@ -10,7 +10,7 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v5
-      # after the test run completes
+        # after the test run completes
       # store videos and any screenshots
       - uses: actions/upload-artifact@v3
         if: failure()
@@ -18,8 +18,8 @@ jobs:
           name: cypress-screenshots
           path: cypress/screenshots
       # Test run video was always captured, so this action uses "always()" condition
-      - uses: actions/upload-artifact@V3
-        if: alays()
+      - uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: cypress-videos
           path: cypress/videos
